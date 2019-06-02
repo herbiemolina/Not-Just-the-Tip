@@ -1,0 +1,23 @@
+{
+  "name": "Not-Just-the-Tip",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/herbiemolina/Not-Just-the-Tip.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/herbiemolina/Not-Just-the-Tip/issues"
+  },
+  "homepage": "https://github.com/herbiemolina/Not-Just-the-Tip#readme",
+  "dependencies": {
+    "inquirer": "^6.3.1"
+  }
+}
