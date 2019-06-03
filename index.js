@@ -6,17 +6,24 @@ inquirer
  .prompt([
      {
      type: "input",
-     message: "Hello User. Welcome to the Just-The-Tip. How much was your check today",
+     message: "Hello User. Welcome to the Just-The-Tip. \n\ How much was your check today?",
      name: "check"
+     },
+
+     {
+         type: "number",
+         message: "What Percent would you tip?",
+         name: "tip"
      }
  ]).then(function(inquirerResponse) {
 
     var check = parseInt(inquirerResponse.check);
-    var tip = check * .2;
-    var total = check * 1.2;
+    var percent = parseInt(inquirerResponse.tip) * .01;
+    var tip = check * percent;
+    var total = check * 1 * percent;
 
-    console.log("the tip is " + tip);
-    console.log("the total is " + total);
+    console.log("the tip is $" + tip);
+    console.log("the total is $" + total);
     // console.log(inquirerResponse.check)
 
  })
