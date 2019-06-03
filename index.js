@@ -5,7 +5,7 @@ var inquirer = require("inquirer")
 inquirer
  .prompt([
      {
-     type: "input",
+     type: "number",
      message: "Hello User. Welcome to the Just-The-Tip. \n\ How much was your check today? $",
      name: "check"
      },
@@ -14,6 +14,16 @@ inquirer
          type: "number",
          message: "What Percent would you tip? %",
          name: "tip"
+     },
+
+     {
+        type: "confirm",
+        message: "Would you like to split the check?",
+        name: "split",
+
+        if (y) {
+            console.log("I'm a genius!")
+        }
      }
  ]).then(function(inquirerResponse) {
 
@@ -23,6 +33,8 @@ inquirer
     var total = check + tip;
 
     console.log("the tip is $" + tip);
+
+
     console.log("the total is $" + total);
     // console.log(inquirerResponse.check)
 
